@@ -1,0 +1,13 @@
+{
+  "Title": "The Last Of Us Survival",
+  "Type": "game",
+  "Org": "tpa",
+  "Ident": "the_last_of_us_survival",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": null,
+  "HasCode": true,
+  "CodePath": "/code/",
+  "RootNamespace": "Sandbox"
+}
