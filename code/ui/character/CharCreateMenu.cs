@@ -1,4 +1,5 @@
-﻿using Sandbox.UI;
+﻿using System;
+using Sandbox.UI;
 using Sandbox.UI.Construct;
 using Sandbox;
 using Sandbox.factions;
@@ -124,8 +125,7 @@ public class CharCreateMenu : Panel
 		this.Delete( false );
 
 		var hunter = new Hunters();
-		var character = Local.Client.Pawn as Character;
-		if ( character == null )
+		if ( Local.Client.Pawn is not Character character )
 			return;
 		character.SetName( "Eren Jäger" );
 		character.SetDesc( "Le meilleur chasseur avec sa horde de titans." );
@@ -137,8 +137,7 @@ public class CharCreateMenu : Panel
 		this.Delete( false );
 
 		var firefly = new Fireflies();
-		var character = Local.Client.Pawn as Character;
-		if ( character == null )
+		if ( Local.Client.Pawn is not Character character )
 			return;
 		character.SetName( "Eren Jäger" );
 		character.SetDesc( "Le meilleur chasseur avec sa horde de titans." );
