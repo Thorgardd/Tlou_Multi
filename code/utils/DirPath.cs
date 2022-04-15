@@ -8,7 +8,7 @@ public class DirPath
 	/// <returns>String</returns>
 	public static string GetCharacterPath()
 	{
-		return "/Character";
+		return "/character";
 	}
 
 	
@@ -18,7 +18,7 @@ public class DirPath
 	/// <returns>String</returns>
 	public static string GetEntitiesPath()
 	{
-		return "/Entities";
+		return "/entities";
 	}
 
 	
@@ -28,7 +28,7 @@ public class DirPath
 	/// <returns>String</returns>
 	public static string GetToolPath()
 	{
-		return "/Tools";
+		return "/tools";
 	}
 
 	
@@ -38,7 +38,7 @@ public class DirPath
 	/// <returns>String</returns>
 	public static string GetUiPath()
 	{
-		return "/Ui";
+		return "/ui";
 	}
 	
 	
@@ -48,7 +48,7 @@ public class DirPath
 	/// <returns>String</returns>
 	public static string GetUtilsPath()
 	{
-		return "/Utils";
+		return "/utils";
 	}
 
 	
@@ -58,6 +58,6 @@ public class DirPath
 	/// <returns>String</returns>
 	public static string GetWeaponsPath()
 	{
-		return "/Weapons";
+		return "/weapons";
 	}
 }

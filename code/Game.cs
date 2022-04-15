@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using Sandbox.UI;
+using Sandbox.ui.character;
 
 namespace Sandbox
 {
@@ -26,8 +27,6 @@ namespace Sandbox
 		/// <param name="client">Client</param>
 		public override void ClientJoined( Client client )
 		{
-			base.ClientJoined( client );
-    
 			base.ClientJoined( client );
 			var player = new Character( client, "Eren Jäger", "Best Titan we've ever known" );
 			client.Pawn = player;

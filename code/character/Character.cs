@@ -5,8 +5,9 @@ public partial class Character : Player
 {
 	[Net] private string name { get; set; }
 	[Net] private string description { get; set; }
-	[Net] public int health { get; set; }
-	[Net] public Faction faction { get; set; }
+	[Net] private int health { get; set; }
+	[Net] private Faction faction { get; set; }
+	private Entity Pawn;
 
 	/// <summary>
 	/// Default init
@@ -29,6 +30,8 @@ public partial class Character : Player
 		this.name = name;
 		this.description = description;
 	}
+	
+	
 
 	#region Getter / Setter
 
@@ -70,6 +73,15 @@ public partial class Character : Player
 	public void SetFaction( Faction factionParam )
 	{
 		faction = factionParam;
+	}
+	
+	public void SetPawn(Entity pawnParam)
+	{
+		Pawn = pawnParam;
+	}
+	public Entity GetPawn()
+	{
+		return Pawn;
 	}
 
 	#endregion

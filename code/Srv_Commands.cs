@@ -12,4 +12,13 @@ public class Srv_Commands
 		Log.Info( character.GetDesc() );
 		Log.Info( character.GetFaction() );
 	}
+
+	[ServerCmd( "/getfaction" )]
+	public static void Factions()
+	{
+		var character = Local.Client.Pawn as Character;
+		if ( character == null )
+			return;
+		Log.Info( character.GetFaction() );
+	}
 }

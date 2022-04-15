@@ -6,9 +6,9 @@ using Sandbox.factions;
 
 namespace Sandbox.ui.character;
 
-public class CharCreateMenu : Panel
+public class FactionSelection : Panel
 {
-	public CharCreateMenu()
+	public FactionSelection()
 	{
 		var ImageBg = new ModulableImage( "/assets/images/BgCharCreate.png",
 			new Styles()
@@ -118,29 +118,16 @@ public class CharCreateMenu : Panel
 		AddChild( ImageBg );
 		AddChild( blackFilter );
 	}
-
-
+	
 	public void HunterSelect()
 	{
-		this.Delete( false );
-
-		var hunter = new Hunters();
-		if ( Local.Client.Pawn is not Character character )
-			return;
-		character.SetName( "Eren Jäger" );
-		character.SetDesc( "Le meilleur chasseur avec sa horde de titans." );
-		character.SetFaction( hunter );
+		this.Delete( true );
+		Local.Hud.AddChild( new CharacterCreate() );
 	}
 
 	public void FireflySelect()
 	{
-		this.Delete( false );
-
-		var firefly = new Fireflies();
-		if ( Local.Client.Pawn is not Character character )
-			return;
-		character.SetName( "Eren Jäger" );
-		character.SetDesc( "Le meilleur chasseur avec sa horde de titans." );
-		character.SetFaction( firefly );
+		this.Delete( true );
+		Local.Hud.AddChild( new CharacterCreate() );
 	}
 }
